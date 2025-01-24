@@ -1,3 +1,4 @@
+import LoginSignup from "./Components/LoginSignup/LoginSignup"
 
 
 function App() {
@@ -5,7 +6,8 @@ function App() {
 
   return (
     <>
-     
+    
+     <LoginSignup/>
     </>
   )
 }
