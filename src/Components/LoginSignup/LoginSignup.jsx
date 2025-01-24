@@ -18,19 +18,7 @@ const LoginSignup = () =>{
         fontWeight: "700",
         cursor: "pointer"
     }
-    const submit1={
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "220px",
-        height: "59px",
-        color: "#fff",
-        background: "#42006c",
-        borderRadius: "50px",
-        fontSize: "19px",
-        fontWeight: "700",
-        cursor: "pointer"
-    }
+  
     const text={
         color:"#3c009d",
         fontSize:" 48px",
@@ -48,10 +36,11 @@ const LoginSignup = () =>{
         <div className={styles.underline}></div>
       </div>
       <div className={styles.inputs}>
-        <div className={styles.input}>
+        {action==="Login"?<div></div>: <div className={styles.input}>
             <img src={user_icon} alt="" className={styles.img1}/>
             <input type="text" placeholder='Name'/>
-        </div>
+        </div>}
+  
         <div className={styles.input}>
             <img src={email_icon} alt="" className={styles.img1}/>
             <input type="email" placeholder='Email Id'/>
@@ -61,7 +50,8 @@ const LoginSignup = () =>{
             <input type="password"  placeholder='Password'/>
         </div>
       </div>
-      <div className={styles.forget_password}>Lost Password?<span>Click Here!</span></div>
+      {action==="sign up"?<div></div>:<div className={styles.forget_password}>Lost Password?<span>Click Here!</span></div>}
+     
       <div className={styles.password_container}>
         <div style={submit} className={action==="login"?"submit gray" : "submit"} onClick={()=>{setAction("sign up")}}>Sign Up</div>
         <div style={submit}  className={action==="Sign Up"?"submit gray": "submit"}onClick={()=>{setAction("Login")}}>Login</div>
