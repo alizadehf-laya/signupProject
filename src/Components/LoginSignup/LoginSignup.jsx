@@ -3,8 +3,10 @@ import password_icon from './Assets/password.jfif'
 import email_icon from './Assets/email.jfif'
 import user_icon from './Assets/OIP.jfif'
 import { useState } from 'react'
+import GoogleLogin from '../GoogleLogin/GoogleLogin'
 
 const LoginSignup = () =>{
+  <GoogleLogin/>
     const submit={
         display: "flex",
         justifyContent: "center",
