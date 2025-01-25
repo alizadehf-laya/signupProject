@@ -6,7 +6,7 @@ import { useState } from 'react'
 import GoogleLogin from '../GoogleLogin/GoogleLogin'
 
 const LoginSignup = () =>{
-  <GoogleLogin/>
+
     const submit={
         display: "flex",
         justifyContent: "center",
@@ -20,7 +20,7 @@ const LoginSignup = () =>{
         fontWeight: "700",
         cursor: "pointer"
     }
-  
+
     const text={
         color:"#3c009d",
         fontSize:" 48px",
@@ -32,7 +32,11 @@ const LoginSignup = () =>{
     }
     const [action,setAction] = useState("Sign Up");
     return(
+      <>
+     
+
         <div className={styles.container}>
+      
       <div className={styles.header}>
         <div  style={text}>{action}</div>
         <div className={styles.underline}></div>
@@ -57,8 +61,12 @@ const LoginSignup = () =>{
       <div className={styles.password_container}>
         <div style={submit} className={action==="login"?"submit gray" : "submit"} onClick={()=>{setAction("sign up")}}>Sign Up</div>
         <div style={submit}  className={action==="Sign Up"?"submit gray": "submit"}onClick={()=>{setAction("Login")}}>Login</div>
+    
       </div>
+      {action==="Login"&& <GoogleLogin />}
         </div>
+        </>
     )
+    
 }
 export default LoginSignup

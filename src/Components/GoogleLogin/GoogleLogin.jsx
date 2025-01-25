@@ -1,19 +1,22 @@
 import styles from "./google.module.css"
 const GoogleLogin = () => {
+    const submit1={
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "220px",
+        height: "59px",
+        color: "#fff",
+        background: "#42006c",
+        borderRadius: "50px",
+        fontSize: "19px",
+        fontWeight: "700",
+        cursor: "pointer",
+        marginLeft: "200px",
+    }
 return(
     <>
-    <div className={styles.loginContainer}>
-        <h2 className={styles.formTitle}>Login With</h2>
-        <div className={styles.socialLogin}>
-            <button className={styles.socialButton}>
-                <img src="" alt="google" className={styles.SocialIcon}/>Google
-            </button>
-            <button className={styles.socialButton}>
-                <img src="" alt="apple" className={styles.SocialIcon}/>apple
-            </button>
-        </div>
-        <p className={styles.seprator}><span>Or</span></p>
-    </div>
+  <div style={submit1} >Login with Google</div>
     </>
 )
 }
